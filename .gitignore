@@ -1,3 +1,5 @@
+# ingoring auto generated files
 .angular/
 
-.node_modules
+# ingoring node modules 
+node_modules/
