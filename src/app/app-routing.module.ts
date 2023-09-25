@@ -7,9 +7,11 @@ const routes: Routes = [
   { path: 'appliance-management', loadChildren: () => import('./appliance-management/appliance-management.module').then(m => m.ApplianceManagementModule) },
   {
     path: '',
-    redirectTo: '',
+    redirectTo: '/login',
     pathMatch: 'full'
-  }
+  },
+  { path: 'service-offerings', loadChildren: () => import('./service-offerings/service-offerings.module').then(m => m.ServiceOfferingsModule) },
+  { path: 'login', loadChildren: () => import('./login/login-routing.module').then(m => m.LoginRoutingModule) }
 ];
 
 @NgModule({
