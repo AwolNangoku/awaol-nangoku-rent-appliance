@@ -18,6 +18,14 @@ export class LoginFormComponent {
     private router: Router
   ) {}
 
+  get userEmail () {
+    return this.loginForm.get('email')
+  }
+
+  get userPassword () {
+    return this.loginForm.get('password')
+  }
+  
   login() {
     if (this.loginForm.valid && this.loginForm.touched) {
       console.log('Signing user in with...', this.loginForm.value)

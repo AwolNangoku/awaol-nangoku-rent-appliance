@@ -6,8 +6,8 @@ const routes: Routes = [
   { path: 'service-offerings', loadChildren: () => import('./service-offerings/service-offerings.module').then(m => m.ServiceOfferingsModule) },
   { path: 'login', loadChildren: () => import('./login/login-routing.module').then(m => m.LoginRoutingModule) },
   { path: 'create-account', loadChildren: () => import('./create-account/create-account.module').then(m => m.CreateRoutingModule) },
-  {path: '', redirectTo: '/login', pathMatch: 'full'},
-  {path: '**', component: PageNotFoundComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
